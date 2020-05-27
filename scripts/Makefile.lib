@@ -284,7 +284,7 @@ cmd_minigzip = (cat $(filter-out FORCE,$^) | minigzip > $@) > /dev/null 2>&1 || 
 
 # DTC
 # ---------------------------------------------------------------------------
-DTC ?= $(objtree)/scripts/dtc/dtc
+DTC := $(KBUILD_SRC)/tools/dtc
 
 # Disable noisy checks by default
 ifeq ($(KBUILD_ENABLE_EXTRA_GCC_CHECKS),)
